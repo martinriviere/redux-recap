@@ -6,7 +6,6 @@ import Input from "./containers/Input";
 import Reducer from "./containers/Reducer";
 import Store from "./containers/Store";
 import Dispatch from "./containers/Dispatch";
-import Arrow from "./components/Arrow";
 
 function App() {
   return (
