@@ -5,7 +5,7 @@ const mapStateToProps = state => ({ tasks: state.tasks, filter: state.filter });
 
 function Tasks({ tasks, filter, dispatch }) {
   return (
-    <ul style={{ listStyle: "none" }}>
+    <ul style={{ listStyle: "none", marginLeft: -34 }}>
       {tasks
         .filter(task => {
           switch (filter) {
@@ -22,7 +22,7 @@ function Tasks({ tasks, filter, dispatch }) {
         .sort((a, b) => a.id - b.id)
         .map(task => (
           <li key={task.id}>
-            {task.title}
+            {task.title + " "}
             <input
               type="checkbox"
               checked={task.done}
@@ -32,9 +32,9 @@ function Tasks({ tasks, filter, dispatch }) {
                 dispatch({
                   type: "SET_ACTION",
                   action: `{
-                  type: "TOGGLE_TASK",
-                  id: ${task.id}
-                }`,
+                    type: "TOGGLE_TASK",
+                    id: ${task.id}
+                  }`,
                   actionObj: action
                 });
               }}

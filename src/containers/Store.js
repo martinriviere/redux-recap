@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 function Store({ tasks, filter }) {
   return (
-    <div style={{ textAlign: "left", width: "50%" }}>
+    <div style={{ textAlign: "left", width: "40%" }}>
       <pre>
         {`store.state = {
   filter: "${filter}",
@@ -11,8 +11,7 @@ function Store({ tasks, filter }) {
     ${tasks.map(
       task =>
         `  {id: ${task.id}, title: "${task.title}", done: ${task.done}}, \n`
-    )}
-  ]
+    )}  ]
 }`}
       </pre>
     </div>
