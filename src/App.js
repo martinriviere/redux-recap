@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Tasks from "./containers/Tasks";
+import Filter from "./containers/Filter";
+import Input from "./containers/Input";
+import Reducer from "./containers/Reducer";
+import Store from "./containers/Store";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input />
+      <br />
+      <Filter />
+      <Tasks />
+      <div style={{ margin: 72, display: "flex" }}>
+        <Reducer />
+        <Store />
+      </div>
     </div>
   );
 }
